@@ -1,0 +1,101 @@
+
+<!DOCTYPE htmlPUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>crossword</title>
+</head>
+<body>
+  <style>
+
+  input#buttons001 {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: context-menu;
+  }
+
+  input#buttons002 {
+    border: 1px solid black;
+    background-color: black;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: context-menu;
+  }
+  </style>
+
+<input onkeydown="keyCode(event)" id="buttons001" type="text" id="names001" maxlength="1" /><input onkeydown="keyCode(event)" id="buttons001" type="text" id="names002" maxlength="1" /><input onkeydown="keyCode(event)" id="buttons001" type="text" id="names003" maxlength="1" />
+
+<br><input onkeydown="keyCode(event)" id="buttons002" type="text" id="names004" maxlength="1" /><input onkeydown="keyCode(event)" id="buttons001" type="text" id="names005" maxlength="1" /><input onkeydown="keyCode(event)" id="buttons002" disabled="disabled" id="names006" maxlength="1" />
+
+<br><input onkeydown="keyCode(event)" id="buttons001" type="text" id="names007" maxlength="1" /><input onkeydown="keyCode(event)" id="buttons002" disabled="disabled" id="names008" maxlength="1" /><input onkeydown="keyCode(event)" id="buttons001" type="text" id="names009" maxlength="1" />
+
+<br>
+<br>
+
+<div id="next001"></div>
+<p id="message001"></p>
+<p id="score001">Number of letter 0 out of 9</p>
+
+<script>
+function keyCode(event) {
+
+var m001 = document.getElementById("names001").value; var m002 = document.getElementById("names002").value; var m003 = document.getElementById("names003").value;
+var m004 = document.getElementById("names004").value; var m005 = document.getElementById("names005").value; var m006 = document.getElementById("names006").value;
+var m007 = document.getElementById("names007").value; var m008 = document.getElementById("names008").value; var m009 = document.getElementById("names009").value;
+
+var w001 = 0; var w002 = 0; var w003 = 0; var w004 = 0; var w005 = 0; var w006 = 0; var w007 = 0; var w008 = 0; var w009 = 0;
+
+var b = event.keyCode;
+
+if (b == 13 && m001 == "t") {
+  w001 = 1
+  document.getElementById("name001").value="m001";
+}
+
+if (b == 13 && m002 == "o") {
+  w002 = 1
+  document.getElementById("name002").value="m002";
+}
+
+if (b == 13 && m003 == "o") {
+  w003 = 1
+  document.getElementById("name003").value="m003";
+}
+
+if (b == 13 && m005 == "e") {
+  w005 = 1
+  document.getElementById("name005").value="m005";
+}
+
+if (b == 13 && m007 == "l") {
+  w007 = 1
+  document.getElementById("name007").value="m007";
+}
+
+if (b == 13 && m009 == "a") {
+  w003 = 1
+  document.getElementById("name009").value="m009";
+}
+
+var q = w001 + w002 + w003 + w005 + w007 + w009
+
+
+
+document.getElementById("score001").innerHTML = "Number of letters: " + q + " out of 06";
+            if (q == "06") {
+            document.getElementById("disappear001").innerHTML = "";
+            document.getElementById("next001").innerHTML = "Congratulations. You have completed this puzzle...";
+            }
+            }
+    </script>
+</body>
+</html>
