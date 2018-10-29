@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>SHER</title>
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<div class="box">
+    <div class="iam">IAM</div>
+    <div class="sher" id="sher">
+        <ul>
+            <li><input type="text" value=""></li>
+            <li><input type="text" value=""></li>
+            <li><input type="text" value=""></li>
+            <li><input type="text" value=""></li>
+        </ul>
+    </div>
+    <div id="tips" class="tips"></div>
+    <div class="locked">LOCKED</div>
+
+</div>
+
+<script>
+    var sher=document.getElementById('sher');
+    var tips=document.getElementById('tips');
+    //console.log(sher);
+    var inputs=sher.getElementsByTagName('input');
+    //console.log(inputs);
+    for(var i=0;i<inputs.length;i++){
+
+        inputs[0].addEventListener('input', function () {
+            if(inputs[0].value == 'S'){
+                tips.innerText='';
+
+            }else{
+                tips.innerText='Error';
+            }
+        });
+
+        inputs[1].addEventListener('input', function () {
+            if(inputs[1].value == 'H'){
+                tips.innerText='';
+            }else{
+                tips.innerText='Error';
+            }
+        });
+
+        inputs[2].addEventListener('input', function () {
+            if(inputs[2].value == 'E'){
+                tips.innerText='';
+            }else{
+                tips.innerText='Error';
+            }
+        });
+
+        inputs[3].addEventListener('input', function () {
+            if(inputs[3].value == 'R'){
+               /* tips.innerText='Congratulations! You have cracked the password'*/
+            }else{
+                tips.innerText='Error';
+            }
+        });
+
+        inputs[i].addEventListener('input', function () {
+            if(inputs[0].value == 'S' && inputs[1].value == 'H' && inputs[2].value == 'E' && inputs[3].value == 'R'){
+                tips.innerText='Congratulations! You have cracked the password'
+            }
+        });
+
+
+
+    }
+
+</script>
+
+</body>
+</html>
