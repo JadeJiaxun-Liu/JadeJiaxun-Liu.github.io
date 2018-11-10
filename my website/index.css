@@ -1,0 +1,14 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+.box{width: 230px;height: 250px;margin: 50px auto 0;background-color: #000;}
+.box .iam{color: #fff;text-align:center; margin-top: 20px; font-size: 40px;}
+.box .sher{}
+.box .sher ul{overflow: hidden;width: 175px;margin: 10px auto 0;}
+.box .sher ul li{width: 40px;height: 66px;background-color: #fff;font-size: 40px;text-align: center;float: left;margin-left: 5px;list-style: none;line-height: 66px;}
+.box .sher ul li:first-child{margin-left: 0;}
+.box .sher ul li input{width: 40px;height: 66px;background-color: #fff;font-size: 40px;text-align: center;float: left;line-height: 66px;}
+.box .locked{color: #fff;text-align:center; margin-top: 10px; font-size: 40px;}
+.box .tips{color: #ffffff;margin-top: 10px;padding-left: 20px;}
+
+
+
